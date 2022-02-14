@@ -1,0 +1,21 @@
+{
+  "name": "event-driven-simulation",
+  "version": "1.0.0",
+  "description": "Events Driven Simulation with typescript",
+  "main": "src/index.ts",
+  "author": "Wilson Gouanet",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "lite-server": "^2.6.1",
+    "prettier": "^2.5.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.5.5"
+  },
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "postbuild": "cp src/index.html dist/",
+    "format": "prettier --write \"src/**/*.{ts, html}\""
+  }
+}
